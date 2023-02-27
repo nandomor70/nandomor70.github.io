@@ -1,0 +1,137 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background-color: rgb(52, 173, 153);
+    font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+    background: radial-gradient(rgb(0, 49, 148), rgb(0, 179, 255));
+    margin: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    color: aliceblue;
+    padding: 5px;
+    box-shadow: 0px 2px 5px gray;
+}
+
+h2, p {
+    color: rgb(17, 22, 37);
+    font-family: 'Source Code Pro', monospace;
+}
+
+h3 {
+    font-family: 'Source Code Pro', monospace;
+}
+
+h2 span, p span, h3 span {
+    color: rgb(119, 137, 172);
+    font-size: larger;
+    font-family: 'Source Code Pro', monospace;
+}
+
+img {
+    border-radius: 5%;
+    width: 100px;
+}
+
+@media (max-width: 500px) {
+    .marco {
+        width: 100%;
+    }
+    .contenido div:after{
+        display: none;
+    }
+}
+
+.marco {
+    width: 60%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    box-shadow: 2px 2px 7px rgb(187, 198, 214);
+    border-radius: 10px;
+}
+
+.contenedor{
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    margin-top: 100px;
+}
+.menudesp {
+    background: #234;
+}
+.menudesp label{
+    display: inline-block;
+    padding: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+.menudesp label:hover{
+    background: #28435d;
+}
+.contenido{
+    position: relative;
+}
+.contenido div{
+    position: absolute;
+    line-height: 1.8;
+    transition: all 600ms ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.90);
+    padding: 30px;
+    background: #fff;
+    padding-bottom: 40px;
+}
+#radio1,#radio2,#radio3,#radio4{
+    display: none;
+}
+#radio1:checked ~ .tab1,
+#radio2:checked ~ .tab2,
+#radio3:checked ~ .tab3,
+#radio4:checked ~ .tab4
+{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.contenido div:after{
+    position: absolute;
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    bottom: 100%;
+    left: 35px;
+}
+.contenido .tab2:after{
+    left: 128px;
+}
+.contenido .tab3:after{
+    left: 235px;
+}
+.contenido .tab4:after{
+    left: 343px;
+}
+
+button {
+    border: none;
+    background: linear-gradient(to right, rgb(14, 67, 174), rgb(7, 94, 224));
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all ease 400ms;
+}
